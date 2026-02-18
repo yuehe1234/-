@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频播放</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .player-box {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 85%;
+        }
+        h1 {
+            margin: 0 0 25px 0;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        audio {
+            width: 100%;
+            height: 50px;
+            margin: 15px 0;
+        }
+        .file-name {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            word-break: break-all;
+        }
+        .tip {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #999;
+        }
+        .play-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .play-btn:hover {
+            background: #5568d3;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-box">
+        <h1>🎵 音频播放器</h1>
+        <div class="file-name">顺丰速运通话录音</div>
+        
+        <audio id="audio" controls>
+            <!-- 修改这里：把 文件名.mp3 换成你实际上传的文件名 -->
+            <source src="顺丰速运@95338_20260218162034(1).mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放
+        </audio>
+        
+        <p class="tip">点击上方播放按钮即可收听<br>无需下载任何软件</p>
+    </div>
+</body>
+</html>
